@@ -42,7 +42,7 @@ function fetchCatByBreed(breedId) {
   const catUrl = `${catInfo}?breed_ids=${breedId}`;
   pingUrl(catUrl)
     .then(data => {
-      const picture = `<div><img src ="${data[0].url}" class ="cat-pic"></div>`;
+      const picture = `<div class = "cat-container"><img src ="${data[0].url}" class ="cat-img"></div>`;
       catDesc.insertAdjacentHTML('afterbegin', picture);
     })
     .catch(err => {
@@ -51,7 +51,7 @@ function fetchCatByBreed(breedId) {
   const catChoice = `https://api.thecatapi.com/v1/breeds/${breedId}`;
   pingUrl(catChoice)
     .then(data => {
-      const catParagraph = `<div class = "cat-txt"><h1>${data.name}</h1><p>${data.description}</p><h2>Temperament</h2>${data.temperament}</p></div>`;
+      const catParagraph = `<div class = "cat-desc"><h1>${data.name}</h1><p>${data.description}</p><h2>Temperament</h2>${data.temperament}</p></div>`;
       catDesc.insertAdjacentHTML('beforeend', catParagraph);
     })
     .catch(err => {

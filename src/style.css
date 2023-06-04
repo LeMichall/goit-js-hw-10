@@ -1,3 +1,21 @@
 .hidden {
   display: none;
 }
+.cat-img {
+  width: 600px;
+  height: 400px;
+}
+.cat-container {
+  margin-top: 40px;
+  margin-right: 40px;
+  /* width: 500px;
+  height: 400px; */
+}
+.cat-desc {
+  margin-top: 20px;
+  font-size: 16px;
+  width: 60%;
+}
+.cat-info {
+  display: flex;
+}
